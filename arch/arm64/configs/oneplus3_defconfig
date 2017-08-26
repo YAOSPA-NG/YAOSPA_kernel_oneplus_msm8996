@@ -1,4 +1,56 @@
-CONFIG_LOCALVERSION="-paranoid"
+# ----------------------------------------------------------------------------------
+# Yank555.lu Kernel configs
+# ----------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------
+# Kernel name
+# ----------------------------------------------------------------------------------
+CONFIG_LOCALVERSION="-OnePlus3t-YAOSPA-NG-7.1.2-Yank555.lu-v1.0"
+# CONFIG_LOCALVERSION_AUTO is not set
+
+# ----------------------------------------------------------------------------------
+# Forced fastcharge (simple USB up to 900mAh)
+# ----------------------------------------------------------------------------------
+CONFIG_FORCE_FAST_CHARGE=y
+
+# ----------------------------------------------------------------------------------
+# LCD_KCAL v2
+# ----------------------------------------------------------------------------------
+CONFIG_FB_MSM_MDSS_KCAL_CTRL=y
+
+# ----------------------------------------------------------------------------------
+# TCP congestion control
+# ----------------------------------------------------------------------------------
+CONFIG_TCP_CONG_ADVANCED=y
+CONFIG_TCP_CONG_BIC=y
+CONFIG_TCP_CONG_CUBIC=y
+CONFIG_TCP_CONG_WESTWOOD=y
+CONFIG_TCP_CONG_HTCP=y
+# CONFIG_TCP_CONG_HSTCP is not set
+# CONFIG_TCP_CONG_HYBLA is not set
+# CONFIG_TCP_CONG_VEGAS is not set
+# CONFIG_TCP_CONG_SCALABLE is not set
+# CONFIG_TCP_CONG_LP is not set
+# CONFIG_TCP_CONG_VENO is not set
+# CONFIG_TCP_CONG_YEAH is not set
+# CONFIG_TCP_CONG_ILLINOIS is not set
+# CONFIG_DEFAULT_BIC is not set
+# CONFIG_DEFAULT_CUBIC is not set
+# CONFIG_DEFAULT_HTCP is not set
+CONFIG_DEFAULT_WESTWOOD=y
+# CONFIG_DEFAULT_RENO is not set
+CONFIG_DEFAULT_TCP_CONG="westwood"
+
+# ----------------------------------------------------------------------------------
+# Include kernel config in /proc
+# ----------------------------------------------------------------------------------
+CONFIG_IKCONFIG=y
+CONFIG_IKCONFIG_PROC=y
+
+# ----------------------------------------------------------------------------------
+#
+# Stock defconfig
+#
 CONFIG_AUDIT=y
 # CONFIG_AUDITSYSCALL is not set
 CONFIG_NO_HZ=y
@@ -90,16 +142,7 @@ CONFIG_INET_ESP=y
 CONFIG_INET_IPCOMP=y
 # CONFIG_INET_XFRM_MODE_BEET is not set
 CONFIG_INET_DIAG_DESTROY=y
-CONFIG_TCP_CONG_ADVANCED=y
-CONFIG_TCP_CONG_HSTCP=y
-CONFIG_TCP_CONG_HYBLA=y
-CONFIG_TCP_CONG_SCALABLE=y
-CONFIG_TCP_CONG_LP=y
-CONFIG_TCP_CONG_VENO=y
-CONFIG_TCP_CONG_YEAH=y
-CONFIG_TCP_CONG_ILLINOIS=y
 CONFIG_TCP_CONG_DCTCP=y
-CONFIG_DEFAULT_WESTWOOD=y
 CONFIG_IPV6_ROUTER_PREF=y
 CONFIG_IPV6_ROUTE_INFO=y
 CONFIG_IPV6_OPTIMISTIC_DAD=y
